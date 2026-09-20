@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1B6B7B" />
+    <meta name="description" content="Private internal operations platform for authorised WIPAHS staff." />
+    <title>WIPAHS OfficeHub</title>
+    <script type="module" crossorigin src="/assets/v20260908e/index-CQVVn--2-oh20260903.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/v20260908e/button-Dy7fhsr_-oh20260903.js">
+    <link rel="modulepreload" crossorigin href="/assets/v20260908e/dist-3583Ew6o-oh20260903.js">
+    <link rel="modulepreload" crossorigin href="/assets/v20260908e/dist-L_I3rwzu-oh20260903.js">
+    <link rel="modulepreload" crossorigin href="/assets/v20260908e/dist-BlpBD8iN-oh20260903.js">
+    <link rel="modulepreload" crossorigin href="/assets/v20260908e/dist-DjUueTxn-oh20260903.js">
+    <link rel="modulepreload" crossorigin href="/assets/v20260908e/Combination-DW_niiRG-oh20260903.js">
+    <link rel="stylesheet" crossorigin href="/assets/v20260908e/officehub-WIPAHS20260908d.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  <script id="officehub-meeting-department-guard">(function(){function f(){if(!location.pathname.startsWith("/meetings/"))return;document.querySelectorAll("label").forEach(function(l){if(l.textContent.trim()!=="Department")return;var p=l.parentElement;if(p&&p.querySelector('[role="combobox"]'))p.style.display="none";});}new MutationObserver(f).observe(document.documentElement,{childList:true,subtree:true});f();})();</script><script src="/officehub-content-tools-v20260915a.js"></script><script src="/officehub-analytics-v20260909a.js"></script><script src="/officehub-social-profile-v20260915b.js"></script></body>
+</html>

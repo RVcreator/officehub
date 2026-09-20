@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1B6B7B" />
+    <meta name="description" content="Private internal operations platform for authorised WIPAHS staff." />
+    <title>WIPAHS OfficeHub</title>
+    <script type="module" crossorigin src="/assets/index-CQVVn--2-oh20260903.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/button-Dy7fhsr_-oh20260903.js">
+    <link rel="modulepreload" crossorigin href="/assets/dist-3583Ew6o-oh20260903.js">
+    <link rel="modulepreload" crossorigin href="/assets/dist-L_I3rwzu-oh20260903.js">
+    <link rel="modulepreload" crossorigin href="/assets/dist-BlpBD8iN-oh20260903.js">
+    <link rel="modulepreload" crossorigin href="/assets/dist-DjUueTxn-oh20260903.js">
+    <link rel="modulepreload" crossorigin href="/assets/Combination-DW_niiRG-oh20260903.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-C7PnjZKZ.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
