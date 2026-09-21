@@ -49,7 +49,11 @@ for entry_file in index.html .htaccess favicon.svg; do
   fi
 done
 
-cp -a assets/. "${LIVE_DIR}/assets/"
+active_release=$(grep -oE "/assets/[^/[:space:]]+" index.html | head -1)
+test -n "$active_release"
+test -d ".$active_release"
+mkdir -p "$LIVE_DIR$active_release"
+cp -a ".$active_release/." "$LIVE_DIR$active_release/"
 install -m 0644 index.html "${LIVE_DIR}/index.html"
 
 if [[ -f .htaccess ]]; then
