@@ -1,0 +1,1 @@
+import{At as e,Mt as t}from"./button-B9fWWtnT.js";var n=t(e(),1);function r(e,t){let[r,i]=n.useState(e);return n.useEffect(()=>{let n=setTimeout(()=>i(e),t??500);return()=>{clearTimeout(n)}},[e,t]),r}export{r as t};

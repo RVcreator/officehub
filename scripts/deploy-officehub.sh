@@ -64,5 +64,15 @@ if [[ -f favicon.svg ]]; then
   install -m 0644 favicon.svg "${LIVE_DIR}/favicon.svg"
 fi
 
+# Publish the root-level compatibility modules referenced by index.html.
+# These files contain incremental OfficeHub fixes that are intentionally
+# separate from the compiled Vite release directory.
+while IFS= read -r root_script; do
+  source_script=".${root_script}"
+  if [[ -f "${source_script}" ]]; then
+    install -m 0644 "${source_script}" "${LIVE_DIR}${root_script}"
+  fi
+done < <(grep -oE 'src="/officehub-[^"]+\.js"' index.html | cut -d'"' -f2 | sort -u)
+
 printf '%s\n' "$(git rev-parse HEAD)" >"${STATE_DIR}/deployed-commit"
 printf '[%s] Deployed %s\n' "$(date -u +%FT%TZ)" "$(git rev-parse --short HEAD)"
