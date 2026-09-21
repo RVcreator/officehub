@@ -49,7 +49,7 @@ for entry_file in index.html .htaccess favicon.svg; do
   fi
 done
 
-rsync -a assets/ "${LIVE_DIR}/assets/"
+cp -a assets/. "${LIVE_DIR}/assets/"
 install -m 0644 index.html "${LIVE_DIR}/index.html"
 
 if [[ -f .htaccess ]]; then
