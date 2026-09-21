@@ -1,0 +1,4 @@
+---
+deployment:
+  tasks:
+    - /usr/bin/env bash /home/wipahs/officehub-repo/scripts/deploy-officehub.sh --force
