@@ -67,8 +67,7 @@ fi
 # Publish the root-level compatibility modules referenced by index.html.
 # These files contain incremental OfficeHub fixes that are intentionally
 # separate from the compiled Vite release directory.
-grep -oE 'src="/officehub-[^"]+\.js"' index.html \
-  | cut -d'"' -f2 \
+grep -oE '/officehub-[^"]+\.js' index.html \
   | sort -u \
   | while IFS= read -r root_script; do
   source_script=".${root_script}"

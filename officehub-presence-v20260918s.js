@@ -1,4 +1,4 @@
-import { mt as supabase } from '/assets/v20260918s/button-Dy7fhsr_-oh20260903.js';
+import { mt as supabase } from '/assets/v20260921c/button-Dy7fhsr_-oh20260903.js';
 
 if (!window.__ohPresenceBoot) {
   window.__ohPresenceBoot = true;

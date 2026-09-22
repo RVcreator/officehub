@@ -1,4 +1,107 @@
-<!DOCTYPE html> <html lang="en-GB"> <head> <meta charset="UTF-8" /> <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <meta name="theme-color" content="#1B6B7B" /> <meta name="description" content="Private internal operations platform for authorised WIPAHS staff." /> <title>WIPAHS OfficeHub</title> <script type="module" crossorigin src="/assets/v20260921c/index-CQVVn--2-oh20260903.js"></script> <link rel="modulepreload" crossorigin href="/assets/v20260921c/button-Dy7fhsr_-oh20260903.js"> <link rel="modulepreload" crossorigin href="/assets/v20260921c/dist-3583Ew6o-oh20260903.js"> <link rel="modulepreload" crossorigin href="/assets/v20260921c/dist-L_I3rwzu-oh20260903.js"> <link rel="modulepreload" crossorigin href="/assets/v20260921c/dist-BlpBD8iN-oh20260903.js"> <link rel="modulepreload" crossorigin href="/assets/v20260921c/dist-DjUueTxn-oh20260903.js"> <link rel="modulepreload" crossorigin href="/assets/v20260921c/Combination-DW_niiRG-oh20260903.js"> <link rel="stylesheet" crossorigin href="/assets/v20260921c/officehub-WIPAHS20260908d.css"> </head> <body> <div id="root"><div id="oh-boot-screen" role="status" style="min-height:100vh;display:grid;place-items:center;background:#f8fafc;color:#164e63;font:600 15px system-ui,sans-serif"><div style="display:grid;gap:12px;justify-items:center"><div style="width:34px;height:34px;border:4px solid #cbd5e1;border-top-color:#0f766e;border-radius:50%;animation:ohspin .8s linear infinite"></div><span>Loading OfficeHub…</span></div></div><style>@keyframes ohspin{to{transform:rotate(360deg)}}</style></div> <script id="officehub-route-events">(function(){if(window.__ohRouteEvents)return;window.__ohRouteEvents=1;["pushState","replaceState"].forEach(function(name){var original=history[name];history[name]=function(){var result=original.apply(this,arguments);dispatchEvent(new Event("oh-routechange"));return result}})})();</script><script id="officehub-meeting-department-guard">(function(){function f(){if(!location.pathname.startsWith("/meetings/"))return;document.querySelectorAll("label").forEach(function(l){if(l.textContent.trim()!=="Department")return;var p=l.parentElement;if(p&&p.querySelector('[role="combobox"]'))p.style.display="none";});}new MutationObserver(f).observe(document.documentElement,{childList:true,subtree:true});f();})();</script><script type="module" src="/officehub-presence-v20260918s.js"></script><script defer src="/officehub-content-tools-v20260918p.js"></script><script defer src="/officehub-analytics-v20260918p.js"></script><script defer src="/officehub-social-profile-v20260918p.js"></script><script defer src="/officehub-workflow-v20260921c.js"></script><script defer src="/officehub-subtasks-v20260918p.js"></script><script id="officehub-calendar-warm" type="module">(function(){let warmed=false;function warm(){if(warmed||location.pathname.startsWith("/auth/"))return;warmed=true;const run=()=>import("/assets/v20260921c/CalendarPage-CuZwdeOl-oh20260903.js").catch(()=>{warmed=false});if("requestIdleCallback" in window)requestIdleCallback(run,{timeout:2000});else setTimeout(run,800)}addEventListener("oh-routechange",warm);addEventListener("load",warm,{once:true});warm()})();</script></body> </html>
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1B6B7B" />
+    <meta name="description" content="Private internal operations platform for authorised WIPAHS staff." />
+    <link rel="preconnect" href="https://wxjjrfhahxqhbixaviwm.supabase.co" crossorigin />
+    <title>WIPAHS OfficeHub</title>
+    <script type="module" crossorigin src="/assets/v20260921c/index-CQVVn--2-oh20260903.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/v20260921c/button-Dy7fhsr_-oh20260903.js" />
+    <link rel="modulepreload" crossorigin href="/assets/v20260921c/dist-3583Ew6o-oh20260903.js" />
+    <link rel="modulepreload" crossorigin href="/assets/v20260921c/dist-L_I3rwzu-oh20260903.js" />
+    <link rel="modulepreload" crossorigin href="/assets/v20260921c/dist-BlpBD8iN-oh20260903.js" />
+    <link rel="modulepreload" crossorigin href="/assets/v20260921c/dist-DjUueTxn-oh20260903.js" />
+    <link rel="modulepreload" crossorigin href="/assets/v20260921c/Combination-DW_niiRG-oh20260903.js" />
+    <link rel="stylesheet" crossorigin href="/assets/v20260921c/officehub-WIPAHS20260908d.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div id="oh-boot-screen" role="status" style="min-height:100vh;display:grid;place-items:center;background:#f8fafc;color:#164e63;font:600 15px system-ui,sans-serif">
+        <div style="display:grid;gap:12px;justify-items:center">
+          <div style="width:34px;height:34px;border:4px solid #cbd5e1;border-top-color:#0f766e;border-radius:50%;animation:ohspin .8s linear infinite"></div>
+          <span>Loading OfficeHub…</span>
+        </div>
+      </div>
+      <style>@keyframes ohspin{to{transform:rotate(360deg)}}</style>
+    </div>
 
+    <script id="officehub-route-events">
+      (function () {
+        if (window.__ohRouteEvents) return;
+        window.__ohRouteEvents = 1;
+        ["pushState", "replaceState"].forEach(function (name) {
+          var original = history[name];
+          history[name] = function () {
+            var result = original.apply(this, arguments);
+            dispatchEvent(new Event("oh-routechange"));
+            return result;
+          };
+        });
+      })();
+    </script>
 
+    <script id="officehub-meeting-department-guard">
+      (function () {
+        function hideLegacyDepartmentField() {
+          if (!location.pathname.startsWith("/meetings/")) return;
+          document.querySelectorAll("label").forEach(function (label) {
+            if (label.textContent.trim() !== "Department") return;
+            var parent = label.parentElement;
+            if (parent && parent.querySelector('[role="combobox"]')) parent.style.display = "none";
+          });
+        }
+        new MutationObserver(hideLegacyDepartmentField).observe(document.documentElement, { childList: true, subtree: true });
+        hideLegacyDepartmentField();
+      })();
+    </script>
 
+    <script id="officehub-deferred-enhancements">
+      (function () {
+        if (location.pathname.startsWith("/auth/")) return;
+
+        var sources = [
+          ["/officehub-presence-v20260918s.js", true],
+          ["/officehub-content-tools-v20260918p.js", false],
+          ["/officehub-analytics-v20260918p.js", false],
+          ["/officehub-social-profile-v20260918p.js", false],
+          ["/officehub-workflow-v20260921c.js", false],
+          ["/officehub-subtasks-v20260918p.js", false]
+        ];
+
+        function loadEnhancements() {
+          if (window.__ohEnhancementsQueued) return;
+          window.__ohEnhancementsQueued = true;
+          sources.forEach(function (entry) {
+            var script = document.createElement("script");
+            script.src = entry[0];
+            script.async = true;
+            if (entry[1]) script.type = "module";
+            document.body.appendChild(script);
+          });
+        }
+
+        if (document.readyState === "complete") setTimeout(loadEnhancements, 0);
+        else addEventListener("load", function () { setTimeout(loadEnhancements, 0); }, { once: true });
+      })();
+    </script>
+
+    <script id="officehub-calendar-warm" type="module">
+      (function () {
+        let warmed = false;
+        function warm() {
+          if (warmed || location.pathname.startsWith("/auth/")) return;
+          warmed = true;
+          const run = () => import("/assets/v20260921c/CalendarPage-CuZwdeOl-oh20260903.js").catch(() => { warmed = false; });
+          if ("requestIdleCallback" in window) requestIdleCallback(run, { timeout: 2000 });
+          else setTimeout(run, 800);
+        }
+        addEventListener("oh-routechange", warm);
+        addEventListener("load", warm, { once: true });
+        warm();
+      })();
+    </script>
+  </body>
+</html>
